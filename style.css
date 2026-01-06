@@ -1,0 +1,111 @@
+:root {
+  --bg: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+  --text: #111;
+  --glass: rgba(255,255,255,0.6);
+  --card: rgba(255,255,255,0.8);
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, #1d2671, #c33764);
+  --text: #ffffff;
+  --glass: rgba(255,255,255,0.15);
+  --card: rgba(0,0,0,0.4);
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.glass-nav {
+  backdrop-filter: blur(10px);
+  background: var(--glass);
+}
+
+.hero {
+  height: 100vh;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid white;
+  transition: transform 0.4s;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+h1 span {
+  background: linear-gradient(45deg, #00c6ff, #ff4ecd);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.glass {
+  background: var(--glass);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.skill-box {
+  background: linear-gradient(45deg, #00c6ff, #7f00ff);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 25px;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+
+.project-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+  border-radius: 30px;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background: var(--glass);
+}
