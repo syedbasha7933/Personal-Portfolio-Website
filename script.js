@@ -1,21 +1,39 @@
-// Scroll animation
-const elements = document.querySelectorAll(".fade-in");
+/* ================= TYPING EFFECT ================= */
+const text = "Java Full Stack | Frontend Developer";
+let index = 0;
+const typingElement = document.getElementById("typingText");
 
-window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-      el.classList.add("show");
-    }
-  });
+function typeEffect() {
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 80);
+  }
+}
+typeEffect();
+
+/* ================= THEME TOGGLE ================= */
+const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+  const body = document.body;
+  const theme = body.getAttribute("data-theme");
+
+  body.setAttribute("data-theme", theme === "light" ? "dark" : "light");
+  toggle.textContent = theme === "light" ? "☀️" : "🌙";
 });
 
-// Dark / Light Mode
-const toggleBtn = document.getElementById("themeToggle");
-const body = document.body;
+/* ================= RESUME MODAL ================= */
+function openResume() {
+  const modal = new bootstrap.Modal(
+    document.getElementById("resumeModal")
+  );
+  modal.show();
+}
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  toggleBtn.innerHTML = body.classList.contains("dark")
-    ? '<i class="fas fa-sun"></i>'
-    : '<i class="fas fa-moon"></i>';
+/* ================= AOS INIT ================= */
+AOS.init({
+  duration: 1200,
+  once: true,
+  easing: "ease-out-cubic"
 });
