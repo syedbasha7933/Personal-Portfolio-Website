@@ -2,142 +2,229 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shaik Syed Basha | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaik Syed Basha  | Personal Portfolio</title>
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  
+  <!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="light">
+<body data-theme="light">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top glass-nav">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Shaik Syed Basha</a>
+<!-- THEME TOGGLE -->
+<button id="themeToggle" class="theme-toggle">🌙</button>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!-- HERO -->
+<section class="hero container-fluid">
+  <div class="row align-items-center">
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <div class="col-md-6" data-aos="fade-right">
+      <h1>Shaik Syed Basha </h1>
+      <h2 id="typingText"></h2>
+      <p class="lead">
+        Java Full Stack Developer / Frontend Developer crafting modern,
+        responsive and user-centric web experiences.
+      </p>
 
-        <!-- Theme Toggle -->
-        <li class="nav-item ms-3">
-          <button id="themeToggle" class="theme-btn">
-            <i class="fas fa-moon"></i>
-          </button>
-        </li>
-      </ul>
+      <div class="mt-4">
+        <a href="SYED_RESUME.pdf" download class="btn btn-warning me-2">Download Resume</a>
+        <button class="btn btn-outline-light" onclick="openResume()">View Resume</button>
+      </div>
     </div>
-  </div>
-</nav>
 
-<!-- Hero -->
-<section class="hero d-flex align-items-center">
-  <div class="container text-center fade-in">
-    <img src="syed-formal-photo.jpg" class="profile-img mb-3" alt="Profile">
-    <h1>Hello, I'm <span>Shaik Syed Basha</span></h1>
-    <p class="lead">
-      Java Full Stack Developer | Java • HTML • CSS • JavaScript • Spring Boot • SQL
-    </p>
-    <a href="SYED-resume.pdf" class="btn btn-gradient mt-3" download>
-      Download Resume
-    </a>
+    <div class="col-md-6 text-center" data-aos="zoom-in">
+      <div class="wave-avatar">
+        <span></span><span></span><span></span>
+        <img src="syed-formal-photo.jpg" alt="Shaik Syed Basha">
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- About -->
-<section id="about" class="section glass fade-in">
-  <div class="container text-center">
-    <h2>About Me</h2>
+<!-- CAREER OBJECTIVE -->
+<section class="section container" data-aos="fade-up">
+  <h2 class="section-title">Career Objective</h2>
+  <div class="glass-card">
+    Motivated Computer Science undergraduate seeking an entry-level Java Full Stack /
+    Front-End Development role to apply strong Java fundamentals along with HTML,
+    CSS, JavaScript,SpringBoot and SQL to build responsive, user-friendly web applications
+    while continuously enhancing technical and professional skills.
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section container-fluid bg-alt">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="glass-card hover-glow">
+          <h5>B.Tech – CSE</h5>
+          <p>Madanapalle Institute of Technology & Sciences</p>
+          <span>2022–2026 | CGPA: 7.7 (Till VII - Semester)</span>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="glass-card hover-glow">
+          <h5>Intermediate (BIEAP)</h5>
+          <p>Narayana Junior College</p>
+          <span>85.7%</span>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="glass-card hover-glow">
+          <h5>SSC</h5>
+          <p>Narayana E.M High School</p>
+          <span>97.6%</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section container">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-cloud">
+    <span>Java</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+    <span>SQL</span><span>Responsive Design</span><span>UI Development</span>
+    <span>MS Excel</span><span>Windows</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section container-fluid">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card c1">
+          <h5>Personal Portfolio Website</h5>
+          <p>Advanced portfolio with dark/light mode, animations and modern UI.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card c4">
+          <h5>Online Bus Ticket Booking System</h5>
+          <p>
+            Full-stack web application built using Spring Boot and MySQL for
+            booking bus tickets with seat availability and CRUD operations.
+          </p>
+        </div>
+    </div>
+
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card c2">
+          <h5>Online Code Editor</h5>
+          <p>Web-based editor for writing and testing code.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="project-card c3">
+          <h5>Random Emoji Generator</h5>
+          <p>Interactive emoji generator with smooth UI.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section container">
+  <h2 class="section-title">Certifications</h2>
+  <div class="row g-3">
+    <div class="col-md-6"><div class="glass-card">SQL & Relational Databases – IBM</div></div>
+    <div class="col-md-6"><div class="glass-card">Frontend Development – Great Learning</div></div>
+    <div class="col-md-6"><div class="glass-card">Web Development – edX (IBM)</div></div>
+    <div class="col-md-6"><div class="glass-card">Java Programming – edX</div></div>
+  </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section class="section container">
+  <h2 class="section-title">Soft Skills</h2>
+  <div class="glass-card text-center">
+    Management & Coordination • Decision Making • Writing Skills
+  </div>
+</section>
+
+<!-- RESUME MODAL -->
+<div class="modal fade" id="resumeModal">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">My Resume</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="SYED_RESUME.pdf"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section container" data-aos="fade-up">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-card glass-card text-center">
+
     <p>
-      Computer Science Engineering student passionate about building
-      modern, responsive, and user-friendly web applications using
-      frontend and backend technologies.
+      <i class="fas fa-phone"></i>
+      <span>+91 9000756143</span>
     </p>
-  </div>
-</section>
 
-<!-- Skills -->
-<section id="skills" class="section fade-in">
-  <div class="container">
-    <h2 class="text-center mb-4">Skills</h2>
-    <div class="row text-center">
-      <div class="col-md-2 col-6 skill-box">Java</div>
-      <div class="col-md-2 col-6 skill-box">HTML</div>
-      <div class="col-md-2 col-6 skill-box">CSS</div>
-      <div class="col-md-2 col-6 skill-box">JavaScript</div>
-      <div class="col-md-2 col-6 skill-box">Bootstrap</div>
-      <div class="col-md-2 col-6 skill-box">Spring Boot</div>
-      <div class="col-md-2 col-6 skill-box">SQL</div>
-    </div>
-  </div>
-</section>
+    <p>
+      <i class="fas fa-envelope"></i>
+      <span>syedbashashaik27933@gmail.com</span>
+    </p>
 
-<!-- Projects -->
-<section id="projects" class="section glass fade-in">
-  <div class="container">
-    <h2 class="text-center mb-4">Projects</h2>
-
-    <div class="row">
-      <div class="col-md-4">
-        <div class="project-card">
-          <h4>Portfolio Website</h4>
-          <p>Modern portfolio with dark/light mode and animations.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card">
-          <h4>Online Code Editor</h4>
-          <p>Frontend UI for writing and managing code.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card">
-          <h4>Random Emoji Generator</h4>
-          <p>JavaScript app generating random emojis.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="section fade-in">
-  <div class="container text-center">
-    <h2>Contact</h2>
-    <p><i class="fas fa-phone"></i> +91 9000756143</p>
-    <p><i class="fas fa-envelope"></i> syedbashashaik27933@gmail.com</p>
     <p>
       <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/syedbasha-shaik" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/syedbasha-shaik" target="_blank">
+        linkedin.com/in/syedbasha-shaik
+      </a>
     </p>
+
     <p>
       <i class="fab fa-github"></i>
-      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://github.com/" target="_blank">
+        github.com
+      </a>
     </p>
+
   </div>
 </section>
 
-<footer class="text-center p-3">
-  © 2026 Shaik Syed Basha | Personal Portfolio
+<!-- FOOTER -->
+<footer class="footer text-center">
+  © 2026 Shaik Syed Basha | Advanced Personal Portfolio
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
